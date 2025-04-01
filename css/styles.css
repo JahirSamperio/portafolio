@@ -1,531 +1,722 @@
 /* CSS Variables for consistent colors throughout the site
            Using variables makes it easy to change the color scheme in one place */
-:root {
-    --primary: #0f172a;
-    /* Dark blue for header, footer, and primary elements */
-    --secondary: #3b82f6;
-    /* Medium blue for buttons and accents */
-    --light: #f8fafc;
-    /* Very light gray for background */
-    --dark: #1e293b;
-    /* Dark slate for some text and elements */
-    --accent: #38bdf8;
-    /* Light blue for hover states and highlights */
-    --text: #334155;
-    /* Dark gray for main text content */
-    --border: #e2e8f0;
-    /* Light gray for borders */
-}
-
-/* Reset default browser styles for consistency */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* Makes width include padding and border */
-}
-
-/* Base styles for the entire document */
-body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    line-height: 1.6;
-    /* Improves readability of text */
-    color: var(--text);
-    background-color: var(--light);
-}
-
-/* Link styles with transition for smooth hover effect */
-a {
-    color: var(--secondary);
-    text-decoration: none;
-    transition: color 0.3s ease;
-    /* Smooth color change on hover */
-}
-
-a:hover {
-    color: var(--accent);
-}
-
-/* Container to center content and set max width */
-.container {
-    max-width: 1200px;
-    /* Prevents content from stretching too wide on large screens */
-    margin: 0 auto;
-    /* Centers the container */
-    padding: 0 2rem;
-    /* Adds space on the sides */
-}
-
-/* ===== HEADER STYLES ===== */
-header {
-    background-color: var(--primary);
-    color: white;
-    padding: 1rem 0;
-    position: sticky;
-    /* Makes header stick to the top when scrolling */
-    top: 0;
-    z-index: 100;
-    /* Ensures header stays above other content */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
-}
-
-/* Navigation bar layout using flexbox */
-nav {
-    display: flex;
-    justify-content: space-between;
-    /* Puts logo on left, links on right */
-    align-items: center;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: white;
-}
-
-/* Navigation links as a horizontal list */
-.nav-links {
-    display: flex;
-    list-style: none;
-}
-
-.nav-links li {
-    margin-left: 2rem;
-    /* Space between nav items */
-}
-
-.nav-links a {
-    color: white;
-    font-weight: 500;
-}
-
-.nav-links a:hover {
-    color: var(--accent);
-}
-
-/* Mobile menu button (hidden by default, shown on small screens) */
-.mobile-menu-btn {
-    display: none;
-    /* Hidden on desktop */
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-/* ===== HERO SECTION STYLES ===== */
-.hero {
-    padding: 6rem 0;
-    background-color: var(--primary);
-    color: white;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.25rem;
-    max-width: 800px;
-    /* Limits width for better readability */
-    margin: 0 auto 2rem;
-    /* Centers the paragraph */
-    color: #cbd5e1;
-    /* Slightly lighter color for contrast */
-}
-
-/* Button styles used throughout the site */
-.btn {
-    display: inline-block;
-    background-color: var(--secondary);
-    color: white;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: var(--accent);
-    color: white;
-}
-
-/* ===== GENERAL SECTION STYLES ===== */
-section {
-    padding: 5rem 0;
-    /* Vertical spacing between sections */
-}
-
-/* Alternating background colors for visual separation */
-section:nth-child(even) {
-    background-color: #f1f5f9;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 3rem;
-    font-size: 2rem;
-    color: var(--primary);
-}
-
-/* ===== ABOUT SECTION STYLES ===== */
-/* Two-column layout using flexbox */
-.about-content {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    /* Space between image and text */
-}
-
-.about-image {
-    flex: 1;
-    /* Takes up 1/3 of the space */
-}
-
-.about-image img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    /* Adds depth */
-}
-
-.about-text {
-    flex: 2;
-    /* Takes up 2/3 of the space */
-}
-
-/* ===== SKILLS SECTION STYLES ===== */
-/* Grid layout for skills cards */
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    /* Responsive grid */
-    gap: 2rem;
-}
-
-.skill-card {
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    text-align: center;
-    transition: transform 0.3s ease;
-    /* Animation for hover effect */
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-    /* Card lifts up slightly on hover */
-}
-
-.skill-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: var(--secondary);
-}
-
-/* ===== PROJECTS SECTION STYLES ===== */
-/* Grid layout for project cards */
-.projects-grid {
-    display: flex;
-    /* Responsive grid */
-    flex-direction: column;
-    /* flex-wrap: nowrap; Evita que los proyectos se apilen en varias filas */
-    gap: 20px; /* Espacio entre los proyectos */
-}
-
-/* Diseño de la tarjeta de proyecto con 50% imagen y 50% texto */
-.project-card {
-    display: flex;
-    flex-direction: row; /* Establecer las columnas en fila */
-    width: 100%;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
-    margin-bottom: 20px; /* Espacio entre tarjetas */
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    /* Card lifts up slightly on hover */
-}
-
-.project-image {
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover .project-image img {
-    transform: scale(1.05);
-    /* Image zooms slightly on hover */
-}
-
-/* Contenido del texto en el 50% derecho */
-.project-content {
-    width: 50%;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centra el texto verticalmente */
-}
-
-.project-title {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-    color: var(--primary);
-}
-
-/* Tags for project technologies */
-.project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1rem;
-}
-
-.project-tag {
-    background-color: #e0f2fe;
-    /* Light blue background */
-    color: var(--secondary);
-    padding: 0.25rem 0.75rem;
-    border-radius: 20px;
-    /* Pill shape */
-    font-size: 0.875rem;
-}
-
-/* ===== EXPERIENCE SECTION STYLES ===== */
-/* Timeline layout for experience */
-.timeline {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Vertical line in the middle */
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    background-color: var(--border);
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -1px;
-}
-
-.timeline-item {
-    padding: 10px 40px;
-    position: relative;
-    width: 50%;
-    box-sizing: border-box;
-}
-
-/* Alternating left-right layout */
-.timeline-item:nth-child(odd) {
-    left: 0;
-    /* Left side of timeline */
-}
-
-.timeline-item:nth-child(even) {
-    left: 50%;
-    /* Right side of timeline */
-}
-
-/* Circle markers on the timeline */
-.timeline-item::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border: 4px solid var(--secondary);
-    border-radius: 50%;
-    top: 15px;
-    z-index: 1;
-    /* Ensures circles appear above the line */
-}
-
-/* Position circles on the timeline */
-.timeline-item:nth-child(odd)::after {
-    right: -10px;
-    /* Right side for left items */
-}
-
-.timeline-item:nth-child(even)::after {
-    left: -10px;
-    /* Left side for right items */
-}
-
-.timeline-content {
-    padding: 1.5rem;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-.timeline-date {
-    color: var(--secondary);
-    font-weight: 500;
-}
-
-/* ===== CONTACT SECTION STYLES ===== */
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-}
-
-/* Form input styles */
-input,
-textarea {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    font-family: inherit;
-    /* Inherits the font from body */
-    font-size: 1rem;
-}
-
-textarea {
-    min-height: 150px;
-    resize: vertical;
-    /* Only allows vertical resizing */
-}
-
-/* Submit button styles */
-button[type="submit"] {
-    background-color: var(--secondary);
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button[type="submit"]:hover {
-    background-color: var(--accent);
-}
-
-/* ===== FOOTER STYLES ===== */
-footer {
-    background-color: var(--primary);
-    color: white;
-    padding: 3rem 0;
-    text-align: center;
-}
-
-/* Social media links */
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.social-link {
-    color: white;
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
-}
-
-.social-link:hover {
-    color: var(--accent);
-}
-
-.footer-text {
-    color: #cbd5e1;
-    /* Slightly lighter color */
-}
-
-/* ===== RESPONSIVE STYLES ===== */
-@media (max-width: 768px) {
-
-    /* Show mobile menu button on small screens */
-    .mobile-menu-btn {
-        display: block;
-    }
-
-    /* Mobile navigation menu styling */
-    .nav-links {
-        position: fixed;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: var(--primary);
-        flex-direction: column;
-        /* Stack links vertically */
-        align-items: center;
-        padding: 1rem 0;
-        transform: translateY(-100%);
-        /* Hide menu by default */
-        transition: transform 0.3s ease;
-        z-index: 99;
-    }
-
-    /* Show menu when active class is added via JavaScript */
-    .nav-links.active {
-        transform: translateY(0);
-    }
-
-    .nav-links li {
-        margin: 0.5rem 0;
-    }
-
-    /* Stack about section vertically on mobile */
-    .about-content {
-        flex-direction: column;
-    }
-
-    /* Adjust timeline for mobile */
-    .timeline::after {
-        left: 31px;
-        /* Move line to the left side */
-    }
-
-    .timeline-item {
-        width: 100%;
-        /* Full width */
-        padding-left: 70px;
-        padding-right: 25px;
-    }
-
-    /* All items on the right side */
-    .timeline-item:nth-child(even) {
-        left: 0;
-    }
-
-    /* All circles on the left */
-    .timeline-item::after {
-        left: 21px;
-    }
-}
+           :root {
+            --primary: #0f172a;
+            /* Dark blue for header, footer, and primary elements */
+            --secondary: #3b82f6;
+            /* Medium blue for buttons and accents */
+            --light: #f8fafc;
+            /* Very light gray for background */
+            --dark: #1e293b;
+            /* Dark slate for some text and elements */
+            --accent: #38bdf8;
+            /* Light blue for hover states and highlights */
+            --text: #334155;
+            /* Dark gray for main text content */
+            --border: #e2e8f0;
+            /* Light gray for borders */
+        }
+        
+        /* Reset default browser styles for consistency */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* Makes width include padding and border */
+        }
+        
+        /* Base styles for the entire document */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            /* Improves readability of text */
+            color: var(--text);
+            background-color: var(--light);
+        }
+        
+        /* Link styles with transition for smooth hover effect */
+        a {
+            color: var(--secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            /* Smooth color change on hover */
+        }
+        
+        a:hover {
+            color: var(--accent);
+        }
+        
+        /* Container to center content and set max width */
+        .container {
+            max-width: 1200px;
+            /* Prevents content from stretching too wide on large screens */
+            margin: 0 auto;
+            /* Centers the container */
+            padding: 0 2rem;
+            /* Adds space on the sides */
+        }
+        
+        /* ===== HEADER STYLES ===== */
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            /* Makes header stick to the top when scrolling */
+            top: 0;
+            z-index: 100;
+            /* Ensures header stays above other content */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow for depth */
+        }
+        
+        /* Navigation bar layout using flexbox */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            /* Puts logo on left, links on right */
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex; /* Utilizamos flexbox para alinear */
+            color: white;
+        }
+        
+        .logo img {
+            height: 35px; /* Ajusta según necesites */
+            width: auto;
+            margin-top: 2px; /* Añade espacio entre el logo y el texto (si lo deseas) */
+        }
+        
+        
+        /* Navigation links as a horizontal list */
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+            /* Space between nav items */
+        }
+        
+        .nav-links a {
+            color: white;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+        
+        /* Mobile menu button (hidden by default, shown on small screens) */
+        .mobile-menu-btn {
+            display: none;
+            /* Hidden on desktop */
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* ===== HERO SECTION STYLES ===== */
+        .hero {
+            padding: 6rem 0;
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+          }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            /* Limits width for better readability */
+            margin: 0 auto 2rem;
+            /* Centers the paragraph */
+            color: #cbd5e1;
+            /* Slightly lighter color for contrast */
+        }
+        
+        /* Button styles used throughout the site */
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: var(--accent);
+            color: white;
+        }
+        
+        /* ===== GENERAL SECTION STYLES ===== */
+        section {
+            padding: 5rem 0;
+            /* Vertical spacing between sections */
+        }
+        
+        /* Alternating background colors for visual separation */
+        section:nth-child(even) {
+            background-color: #f1f5f9;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+            color: var(--primary);
+        }
+        
+        /* ===== ABOUT SECTION STYLES ===== */
+        /* Two-column layout using flexbox */
+        .about-content {
+            display: flex;
+            align-items: flex-start; /* Alinea el contenido en la parte superior */
+            gap: 1.5rem; /* Espaciado moderado */
+            max-width: 900px; /* Evita que la sección se vea muy grande */
+            margin: 0 auto; /* Centra el contenido */
+        }
+        
+        .about-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .about-image img {
+            width: 70%; /* Reduce el tamaño de la imagen */
+            max-width: 200px; /* Evita que crezca demasiado */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-text {
+            flex: 2;
+            font-size: 1rem; /* Tamaño de fuente legible sin que ocupe demasiado espacio */
+        }
+        
+        
+        /* ===== SKILLS SECTION STYLES ===== */
+        /* Grid layout for skills cards */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            /* Responsive grid */
+            gap: 2rem;
+        }
+        
+        .skill-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+            /* Animation for hover effect */
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            /* Card lifts up slightly on hover */
+        }
+        
+        .skill-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            padding: 1rem;
+        }
+        
+        .skill-item {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+        
+        .skill-item img {
+            width: 50px;
+            height: auto;
+        }
+        
+        .skill-item:hover {
+            transform: scale(1.1);
+        }
+        
+        
+        /* ===== PROJECTS SECTION STYLES ===== */
+        /* Grid layout for project cards */
+        .projects-grid {
+            display: flex;
+            /* Responsive grid */
+            flex-direction: column;
+            /* flex-wrap: nowrap; Evita que los proyectos se apilen en varias filas */
+            gap: 20px; /* Espacio entre los proyectos */
+        }
+        
+        /* Diseño de la tarjeta de proyecto con 50% imagen y 50% texto */
+        .project-card {
+            display: flex;
+            flex-direction: row; /* Establecer las columnas en fila */
+            width: 100%;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            margin-bottom: 20px; /* Espacio entre tarjetas */
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            /* Card lifts up slightly on hover */
+        }
+        
+        .project-image {
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .project-image img {
+            width: 90%;
+            height: 90%;
+            object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+            /* Image zooms slightly on hover */
+        }
+        
+        /* Contenido del texto en el 50% derecho */
+        .project-content {
+            width: 50%;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centra el texto verticalmente */
+        }
+        
+        .project-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        
+        /* Tags for project technologies */
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .project-tag {
+            background-color: #e0f2fe;
+            /* Light blue background */
+            color: var(--secondary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            /* Pill shape */
+            font-size: 0.875rem;
+        }
+        
+        /* ===== EXPERIENCE SECTION STYLES ===== */
+        /* Timeline layout for experience */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Vertical line in the middle */
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: var(--border);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        /* Alternating left-right layout */
+        .timeline-item:nth-child(odd) {
+            left: 0;
+            /* Left side of timeline */
+        }
+        
+        .timeline-item:nth-child(even) {
+            left: 50%;
+            /* Right side of timeline */
+        }
+        
+        /* Circle markers on the timeline */
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 4px solid var(--secondary);
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+            /* Ensures circles appear above the line */
+        }
+        
+        /* Position circles on the timeline */
+        .timeline-item:nth-child(odd)::after {
+            right: -10px;
+            /* Right side for left items */
+        }
+        
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+            /* Left side for right items */
+        }
+        
+        .timeline-content {
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .timeline-date {
+            color: var(--secondary);
+            font-weight: 500;
+        }
+        
+        /* ===== CONTACT SECTION STYLES ===== */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        /* Form input styles */
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-family: inherit;
+            /* Inherits the font from body */
+            font-size: 1rem;
+        }
+        
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+            /* Only allows vertical resizing */
+        }
+        
+        /* Submit button styles */
+        button[type="submit"] {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: var(--accent);
+        }
+        
+        /* ===== FOOTER STYLES ===== */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        /* Social media links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .social-link {
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .social-link:hover {
+            color: var(--accent);
+        }
+        
+        .footer-text {
+            color: #cbd5e1;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            /* Slightly lighter color */
+        }
+        
+        /* ===== RESPONSIVE STYLES ===== */
+        @media (max-width: 768px) {
+        
+            /* Show mobile menu button on small screens */
+            .mobile-menu-btn {
+                display: block;
+            }
+        
+            /* Mobile navigation menu styling */
+            .nav-links {
+                position: fixed;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: var(--primary);
+                flex-direction: column;
+                /* Stack links vertically */
+                align-items: center;
+                padding: 1rem 0;
+                transform: translateY(-100%);
+                /* Hide menu by default */
+                transition: transform 0.3s ease;
+                z-index: 99;
+            }
+        
+            /* Show menu when active class is added via JavaScript */
+            .nav-links.active {
+                transform: translateY(0);
+            }
+        
+            .nav-links li {
+                margin: 0.5rem 0;
+            }
+        
+            /* Stack about section vertically on mobile */
+            .about-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .about-image {
+                margin-bottom: 1.5rem;
+            }
+        
+            /* Adjust hero section for mobile */
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+        
+            /* Adjust project cards for mobile */
+            .project-card {
+                flex-direction: column;
+            }
+            
+            .project-image, 
+            .project-content {
+                width: 100%;
+            }
+            
+            .project-image {
+                padding: 1rem 1rem 0 1rem;
+            }
+            
+            .project-image img {
+                width: 100%;
+            }
+        
+            /* Adjust timeline for mobile */
+            .timeline::after {
+                left: 31px;
+                /* Move line to the left side */
+            }
+        
+            .timeline-item {
+                width: 100%;
+                /* Full width */
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+        
+            /* All items on the right side */
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+        
+            /* All circles on the left */
+            .timeline-item::after {
+                left: 21px;
+            }
+            
+            /* Adjust skills grid for mobile */
+            .skill-item {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .skill-item img {
+                width: 40px;
+            }
+            
+            /* Adjust section padding for mobile */
+            section {
+                padding: 3rem 0;
+            }
+            
+            .section-title {
+                font-size: 1.75rem;
+                margin-bottom: 2rem;
+            }
+            
+            /* Adjust experience cards for mobile */
+            .experience-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Additional responsive adjustments for very small screens */
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.3rem;
+            }
+            
+            .btn {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+            
+            .skill-item {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .skill-item img {
+                width: 35px;
+            }
+            
+            .project-tags {
+                gap: 0.3rem;
+            }
+            
+            .project-tag {
+                font-size: 0.75rem;
+                padding: 0.2rem 0.5rem;
+            }
+        }
+        
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .experience-card {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+        
+        .experience-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .experience-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .experience-card .timeline-date {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+        
+        .experience-card ul {
+            padding-left: 1rem;
+        }
+        
