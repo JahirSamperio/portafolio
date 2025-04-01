@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio">
     <title>Jahir Alberto Samperio | Software Engineer</title>
     <link rel="icon" type="image/png" href="/img/JS__2_-removebg-preview.png" />
-    <link rel="" href="css/styles.css" as="styles">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
-
 </head>
 
 <body>
@@ -17,17 +17,18 @@
         <div class="container">
             <nav>
                 <!-- Logo/Name that links to top of page -->
-                <a href="#" class="logo">Jahir Alberto Samperio</a>
+                <a href="#" class="logo">
+                    <img src="img/logo.png" alt="Jahir Logo">
+                </a>
                 <!-- Mobile menu toggle button (only visible on small screens) -->
                 <button class="mobile-menu-btn">☰</button>
                 <!-- Navigation links -->
                 <ul class="nav-links">
-                    <li><a href="#skills">Habilidades</a></li>
                     <li><a href="#projects">Proyectos</a></li>
                     <li><a href="#experience">Experiencia</a></li>
                     <li><a href="#education">Educación</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contacto</a></li>
+                    <li><a href="#about">Sobre mí</a></li>
+                    <li><a href="mailto:jahirsampe1234@gmail.com">Contacto</a></li>
                 </ul>
             </nav>
         </div>
@@ -35,50 +36,18 @@
 
     <!-- Hero Section - Main introduction area -->
     <section class="hero" style="background-color: #0f172a;">
-        <div class="container">
+        <article class="container">
             <h1>Jahir Alberto Samperio</h1>
-            <p>Ingeniero de Software enfocado en crear soluciones innovadoras y escalables desde México.</p>
+            <h2>Ingeniero de Software</h2>
+            <br>
+            <p>Comprometido a crear soluciones innovadoras y escalables que marquen la diferencia y transformen el
+                presente.</p>
             <!-- Call-to-action button -->
-            <a href="#contact" class="btn">Contáctame</a>
-        </div>
-    </section>
-
-
-
-    <!-- Skills Section - Technical abilities -->
-    <section id="skills">
-        <div class="container">
-            <h2 class="section-title">Habilidades</h2>
-            <!-- Grid layout for skills cards -->
-            <div class="skills-container">
-                <!-- Individual skill cards with icons -->
-                <div class="skill-card">
-                    <div class="skill-icon">💻</div>
-                    <h3>Frontend</h3>
-                    <p>HTML, CSS, JavaScript, React</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🔧</div>
-                    <h3>Backend</h3>
-                    <p>Node.js, Express, JWT</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🗄️</div>
-                    <h3>Bases de Datos</h3>
-                    <p>MySQL, PostgreSQL, MongoDB, Sequelize</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">☁️</div>
-                    <h3>Servicios en la Nube</h3>
-                    <p>AWS, Cloudinary</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🔄</div>
-                    <h3>Control de Versiones</h3>
-                    <p>Git, Github</p>
-                </div>
+            <div class="hero-buttons">
+                <a href="mailto:jahirsampe1234@gmail.com" class="btn">Contáctame</a>
+                <a href="/files/JahirAlbertoSamperioCurriculum.pdf" download class="btn btn-outline">Descargar CV</a>
             </div>
-        </div>
+        </article>
     </section>
 
     <!-- Projects Section - Portfolio of work -->
@@ -91,11 +60,12 @@
                 <div class="project-card">
                     <div class="project-image">
                         <!-- Placeholder image - replace with actual project screenshot -->
-                        <img src="/img/homepage.png" alt="Project 1">
+                        <img src="/img/simulador_egel.png" alt="Project 1">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Simulador de exámenes EGEL</h3>
-                        <p>Plataforma interactiva para la preparación del EGEL con gestión de exámenes y análisis de rendimiento. Panel administrativo para visualizar estadísticas, reduciendo el tiempo de análisis de resultados en un 40%.</p>
+                        <p>Plataforma interactiva para el EGEL con gestión de exámenes y análisis de rendimiento. Reduce
+                            en 40% el tiempo de análisis y mejora en 35% el desempeño estudiantil.</p>
                         <!-- Technology tags -->
                         <div class="project-tags">
                             <span class="project-tag">React</span>
@@ -112,7 +82,8 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">Preparatoria Sor Juana - Sitio Web Institucional</h3>
-                        <p>Sitio web para la gestión de galería, avisos y documentos PDF. API optimizada para actualizar información académica y administrativa, reduciendo el tiempo de gestión en un 30%.</p>
+                        <p>Sitio web para la gestión de galería, avisos y documentos PDF. API optimizada para actualizar
+                            información académica y administrativa, reduciendo el tiempo de gestión en un 30%.</p>
                         <div class="project-tags">
                             <span class="project-tag">Node.js</span>
                             <span class="project-tag">Express</span>
@@ -127,7 +98,9 @@
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">StarGlasses</h3>
-                        <p>Tienda en línea con autenticación de usuarios, pagos seguros con Stripe y una dashboard administrativa para gestionar productos y pedidos. Optimización de consultas SQL mejorando la eficiencia del sistema en un 35%.</p>
+                        <p>Tienda en línea con autenticación de usuarios, pagos seguros con Stripe y una dashboard
+                            administrativa para gestionar productos y pedidos. Optimización de consultas SQL mejorando
+                            la eficiencia del sistema en un 35%.</p>
                         <div class="project-tags">
                             <span class="project-tag">Node.js</span>
                             <span class="project-tag">Express</span>
@@ -144,48 +117,101 @@
     <!-- Experience Section - Work history -->
     <section id="experience">
         <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <!-- Timeline layout for work experience -->
-            <div class="timeline">
-                <!-- Individual timeline items -->
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Senior Software Engineer</h3>
-                        <p class="timeline-date">2021 - Present</p>
-                        <p>Tech Innovations Inc.</p>
-                        <ul>
-                            <li>Lead the development of enterprise-level web applications</li>
-                            <li>Implement microservices architecture for scalable solutions</li>
-                            <li>Mentor junior developers and conduct code reviews</li>
-                            <li>Collaborate with cross-functional teams to deliver high-quality products</li>
-                        </ul>
-                    </div>
+            <h2 class="section-title">Experiencia</h2>
+            <div class="experience-grid">
+                <!-- Proyecto 1 -->
+                <div class="experience-card">
+                    <h3>Sitio Web Institucional</h3>
+                    <p class="timeline-date">Septiembre 2024 - Enero 2025</p>
+                    <p><strong>Preparatoria Sor Juana Inés de la Cruz</strong></p>
+                    <ul>
+                        <li>Desarrollé el backend utilizando Node.js para gestionar contenido y funcionalidad.</li>
+                        <li>Implementé una plataforma para la gestión de avisos, horarios, y galería de imágenes.</li>
+                        <li>Gestioné bases de datos con MySQL y optimicé el almacenamiento de medios usando Cloudinary.</li>
+                    </ul>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Software Developer</h3>
-                        <p class="timeline-date">2018 - 2021</p>
-                        <p>Digital Solutions Co.</p>
-                        <ul>
-                            <li>Developed and maintained full-stack web applications</li>
-                            <li>Implemented RESTful APIs and database integrations</li>
-                            <li>Optimized application performance and user experience</li>
-                            <li>Participated in agile development processes</li>
-                        </ul>
-                    </div>
+                
+                <!-- Proyecto 2 -->
+                <div class="experience-card">
+                    <h3>Simulador EGEL</h3>
+                    <p class="timeline-date">Enero 2025 - Abril 2025</p>
+                    <p><strong>Escuela Superior de Tlahuelilpan</strong></p>
+                    <ul>
+                        <li>Desarrollé un simulador interactivo de exámenes EGEL con React para mejorar la preparación estudiantil de la universidad.</li>
+                        <li>Optimizé el análisis de rendimiento, reduciendo el tiempo de análisis y mejorando el desempeño de los estudiantes.</li>
+                        <li>Implementé un sistema de gestión de exámenes y estadísticas para una administración eficiente.</li>
+                    </ul>
+                    
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Junior Developer</h3>
-                        <p class="timeline-date">2016 - 2018</p>
-                        <p>WebTech Startup</p>
-                        <ul>
-                            <li>Assisted in frontend development using modern JavaScript frameworks</li>
-                            <li>Implemented responsive designs and UI components</li>
-                            <li>Fixed bugs and improved application functionality</li>
-                            <li>Collaborated with designers to implement visual elements</li>
-                        </ul>
-                    </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Stack tecnológico</h2>
+            <div class="skills-grid">
+                <!-- Frontend -->
+                <div class="skill-item">
+                    <img src="img/stack/html.png" alt="HTML">
+                </div>
+                <div class="skill-item">
+                    <img src="img/stack/css.png" alt="CSS">
+                </div>
+                <div class="skill-item">
+                    <img src="img/stack/javascript.png" alt="JavaScript">
+                </div>
+                <div class="skill-item">
+                    <img src="img/stack/react.png" alt="React">
+                </div>
+
+                <!-- Backend -->
+                <div class="skill-item">
+                    <img src="img/stack/nodejs.png" alt="Node.js">
+                </div>
+                <div class="skill-item">
+                    <img src="img/stack/express.png" alt="Express">
+                </div>
+
+                <!-- Bases de Datos -->
+                <div class="skill-item">
+                    <img src="img/stack/mysql.svg" alt="MySQL">
+                </div>
+                <div class="skill-item">
+                    <img src="img/stack/postgre.png" alt="PostgreSQL">
+                </div>
+                <div class="skill-item">
+                    <img src="img/stack/mongo.svg" alt="MongoDB">
+                </div>
+                <div class="skill-item">
+                    <img src="img/stack/sequelize.webp" alt="Sequelize">
+                </div>
+                <div class="skill-item">
+                    <img src="img/stack/sqlserver.png" alt="SQL Server">
+                </div>
+
+                <!-- Servicios en la Nube -->
+                <div class="skill-item">
+                    <img src="img/stack/aws.png" alt="AWS">
+                </div>
+                <div class="skill-item">
+                    <img src="img/stack/cloudinary.webp" alt="Cloudinary">
+                </div>
+
+                <!-- Control de Versiones -->
+                <div class="skill-item">
+                    <img src="img/stack/git.png" alt="Git">
+                </div>
+                <div class="skill-item">
+                    <img src="img/stack/github.svg" alt="GitHub">
+                </div>
+
+                <!-- Otros -->
+                <div class="skill-item">
+                    <img src="img/stack/linux.png" alt="Linux">
+                </div>
+                <div class="skill-item">
+                    <img src="img/stack/vscode.png" alt="VS Code">
                 </div>
             </div>
         </div>
@@ -194,33 +220,51 @@
     <!-- Education Section - Academic background -->
     <section id="education">
         <div class="container">
-            <h2 class="section-title">Education</h2>
-            <!-- Timeline layout for education -->
+            <h2 class="section-title">Educación</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3>Master's in Computer Science</h3>
-                        <p class="timeline-date">2014 - 2016</p>
-                        <p>University of Technology</p>
-                        <p>Specialized in Software Engineering and Artificial Intelligence</p>
+                        <h3>Licenciatura en Ingeniería en Sistemas</h3>
+                        <p class="timeline-date">2021 - Presente</p>
+                        <p>Universidad Autónoma del Estado de Hidalgo (UAEH)</p>
+                        <p>He trabajado en proyectos integradores de software, además de asistir a congresos como AWS Summit y Conasoft para mantenerme actualizado.</p>
+
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3>Bachelor's in Computer Engineering</h3>
-                        <p class="timeline-date">2010 - 2014</p>
-                        <p>National Institute of Science</p>
-                        <p>Graduated with honors, participated in multiple hackathons and coding competitions</p>
+                        <h3>Certificación Cloud Practitioner AWS</h3>
+                        <p class="timeline-date">2025</p>
+                        <p>Udemy / Taller UAEH</p>
+                        <p>Obtuve conocimientos sobre los servicios de AWS, computación en la nube, almacenamiento,
+                            seguridad y mejores prácticas en la arquitectura de soluciones en la nube.</p>
                     </div>
                 </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Certificación en Scrum Foundation</h3>
+                        <p class="timeline-date">2025</p>
+                        <p>Certiprof</p>
+                        <p>Completé el curso de Scrum 2020, aprendiendo sobre prácticas ágiles para mejorar la eficiencia de equipos y proyectos.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Certificación en Desarrollo Full-Stack</h3>
+                        <p class="timeline-date">2023</p>
+                        <p>Udemy</p>
+                        <p>Realicé un curso intensivo en React, Node.js y bases de datos, adquiriendo habilidades esenciales para el desarrollo web completo.</p>
+                    </div>
+                </div>                
             </div>
         </div>
     </section>
 
+
     <!-- About Section - Personal information and bio -->
     <section id="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title">Sobre mí</h2>
             <!-- Two-column layout with image and text -->
             <div class="about-content">
                 <div class="about-image">
@@ -228,57 +272,45 @@
                     <img src="/img/perfil.jpg" alt="Jahir Alberto Samperio">
                 </div>
                 <div class="about-text">
-                    <p>Soy un ingeniero en software apasionado por la creación de soluciones innovadoras y escalables en el
-                        ámbito TI. Tengo experiencia en desarrollo web, especializado en tecnologías como Node.js, React y
-                        bases de datos relaciones y no relacionales. Me enfoco en la optimización de procesos, seguridad y
-                        rendimiento, con un fuerte compromiso por la calidad del software y la aplicación de mejores prácticas
-                        de desarrollo.
-                        </p>
+                    <p>
+                        Comencé a programar a finales de la preparatoria, motivado por mi <strong>curiosidad</strong>
+                        por las computadoras y mi <strong>entusiasmo</strong> por crear programas y resolver problemas.
+                    </p>
+                    <br>
+                    <p>
+                        Me especializo en <strong>backend</strong> y tengo sólida experiencia en <strong>desarrollo web</strong>, trabajando con tecnologías clave como <strong>Node.js</strong> y <strong>React</strong>, así como con bases de datos <strong>relacionales</strong> y <strong>no relacionales</strong>. Además, me he capacitado en los <strong>fundamentos de AWS</strong>, familiarizándome con servicios clave como <strong>EC2</strong> y <strong>S3</strong>, lo que me permite implementar soluciones escalables y eficientes en la nube.
+                    </p>                                       
+                    <br>
+                    <p>
+                        Mi objetivo es seguir
+                        <strong>aprendiendo</strong>, mejorar mis <strong>habilidades</strong> y seguir creando
+                        <strong>software de calidad</strong> que aporte <strong>valor</strong> a los usuarios.
+                    </p>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Section - Get in touch form -->
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
-            <!-- Contact form -->
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit">Send Message</button>
-            </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer with social links and copyright -->
     <footer>
         <div class="container">
-            <!-- Social media links -->
+            <!-- Social media links with icons -->
             <div class="social-links">
-                <a href="#" class="social-link">LinkedIn</a>
-                <a href="#" class="social-link">GitHub</a>
-                <a href="#" class="social-link">Twitter</a>
-                <a href="#" class="social-link">Email</a>
+                <a href="https://www.linkedin.com/in/jahir-samperio-b03091255/" class="social-link" target="_blank">
+                    <i class="fab fa-linkedin"></i> <!-- Icono de LinkedIn -->
+                </a>
+                <a href="https://github.com/JahirSamperio" class="social-link" target="_blank">
+                    <i class="fab fa-github"></i> <!-- Icono de GitHub -->
+                </a>
+                <a href="mailto:jahirsampe1234@gmail.com" class="social-link">
+                    <i class="fas fa-envelope"></i> <!-- Icono de Email -->
+                </a>
             </div>
-            <p class="footer-text">&copy; 2025 Jahir Alberto Samperio. All rights reserved.</p>
+            <p class="footer-text">&copy; 2025 Jahir Alberto Samperio. Todos los derechos reservados.</p>
         </div>
     </footer>
+    
 
     <!-- JavaScript for interactive elements -->
     <script>
@@ -303,14 +335,6 @@
                     behavior: 'smooth'
                 });
             });
-        });
-
-        // Form submission handler (demo only)
-        const contactForm = document.querySelector('.contact-form');
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault(); // Prevents actual form submission
-            alert('Thank you for your message! This is a demo form, so no message was actually sent.');
-            contactForm.reset(); // Clears the form
         });
     </script>
 </body>
