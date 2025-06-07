@@ -24,8 +24,9 @@
                 <button class="mobile-menu-btn">☰</button>
                 <!-- Navigation links -->
                 <ul class="nav-links">
-                    <li><a href="#projects">Proyectos</a></li>
                     <li><a href="#experience">Experiencia</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#certifications">Certificaciones</a></li>
                     <li><a href="#education">Educación</a></li>
                     <li><a href="#about">Sobre mí</a></li>
                     <li><a href="mailto:jahirsampe1234@gmail.com">Contacto</a></li>
@@ -50,6 +51,54 @@
         </article>
     </section>
 
+    <!-- Experience Section - Work history -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Experiencia</h2>
+            <div class="experience-grid">
+                <!-- XalDigital -->
+                <div class="experience-card">
+                    <h3>XalDigital</h3>
+                    <div class="role-badge trainee">Trainee</div>
+                    <p class="timeline-date">Mayo 2025 - Actualidad</p>
+                    <div class="experience-description">
+                        <p>Desarrollo de soluciones en la nube con AWS, empleando servicios como Lambda, S3, CloudFront y CloudFormation. Automatización de flujos mediante infraestructura como código y gestión de autenticación con Cognito, orientado a sistemas escalables y seguros.</p>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 1 -->
+                <div class="experience-card">
+                    <h3>Sitio Web Institucional</h3>
+                    <div class="role-badge backend">Desarrollador Backend</div>
+                    <p class="timeline-date">Octubre 2024 - Enero 2025</p>
+                    <p><strong>Preparatoria Sor Juana Inés de la Cruz</strong></p>
+                    <div class="experience-description">
+                        <ul>
+                            <li>Desarrollé el backend utilizando Node.js para gestionar contenido y funcionalidad.</li>
+                            <li>Implementé una plataforma para la gestión de avisos, horarios, y galería de imágenes.</li>
+                            <li>Gestioné bases de datos con MySQL y optimicé el almacenamiento de medios usando Cloudinary.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 2 -->
+                <div class="experience-card">
+                    <h3>Simulador EGEL</h3>
+                    <div class="role-badge fullstack">Desarrollador Full-Stack</div>
+                    <p class="timeline-date">Enero 2025 - Abril 2025</p>
+                    <p><strong>Escuela Superior de Tlahuelilpan</strong></p>
+                    <div class="experience-description">
+                        <ul>
+                            <li>Desarrollé un simulador interactivo de exámenes EGEL con React para mejorar la preparación estudiantil de la universidad.</li>
+                            <li>Optimizé el análisis de rendimiento, reduciendo el tiempo de análisis y mejorando el desempeño de los estudiantes.</li>
+                            <li>Implementé un sistema de gestión de exámenes y estadísticas para una administración eficiente.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section - Portfolio of work -->
     <section id="projects">
         <div class="container">
@@ -57,6 +106,29 @@
             <!-- Grid layout for project cards -->
             <div class="projects-grid">
                 <!-- Individual project cards -->
+                <div class="project-card kpi-card">
+                    <div class="project-image confidential">
+                        <div class="confidential-content">
+                            <i class="fas fa-chart-line"></i>
+                            <p>Dashboard KPI</p>
+                            <span>Información confidencial</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">KPI Dashboard – Palacio de Hierro</h3>
+                        <p>Dashboard para visualización de KPIs clave en cumplimiento. Proyecto desarrollado con arquitectura serverless utilizando AWS Lambda, Amazon Cognito, Amazon S3, CloudFront y CloudFormation. Se implementó autenticación, despliegue en la nube y presentación eficiente de datos.</p>
+                        <!-- Technology tags -->
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">Node.js</span>
+                            <span class="project-tag">AWS Lambda</span>
+                            <span class="project-tag">Cognito</span>
+                            <span class="project-tag">S3</span>
+                            <span class="project-tag">CloudFront</span>
+                            <span class="project-tag">CloudFormation</span>
+                        </div>
+                    </div>
+                </div>
                 <div class="project-card">
                     <div class="project-image">
                         <!-- Placeholder image - replace with actual project screenshot -->
@@ -109,39 +181,6 @@
                             <span class="project-tag">Stripe API</span>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section - Work history -->
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-title">Experiencia</h2>
-            <div class="experience-grid">
-                <!-- Proyecto 1 -->
-                <div class="experience-card">
-                    <h3>Sitio Web Institucional</h3>
-                    <p class="timeline-date">Septiembre 2024 - Enero 2025</p>
-                    <p><strong>Preparatoria Sor Juana Inés de la Cruz</strong></p>
-                    <ul>
-                        <li>Desarrollé el backend utilizando Node.js para gestionar contenido y funcionalidad.</li>
-                        <li>Implementé una plataforma para la gestión de avisos, horarios, y galería de imágenes.</li>
-                        <li>Gestioné bases de datos con MySQL y optimicé el almacenamiento de medios usando Cloudinary.</li>
-                    </ul>
-                </div>
-                
-                <!-- Proyecto 2 -->
-                <div class="experience-card">
-                    <h3>Simulador EGEL</h3>
-                    <p class="timeline-date">Enero 2025 - Abril 2025</p>
-                    <p><strong>Escuela Superior de Tlahuelilpan</strong></p>
-                    <ul>
-                        <li>Desarrollé un simulador interactivo de exámenes EGEL con React para mejorar la preparación estudiantil de la universidad.</li>
-                        <li>Optimizé el análisis de rendimiento, reduciendo el tiempo de análisis y mejorando el desempeño de los estudiantes.</li>
-                        <li>Implementé un sistema de gestión de exámenes y estadísticas para una administración eficiente.</li>
-                    </ul>
-                    
                 </div>
             </div>
         </div>
@@ -221,41 +260,52 @@
     <section id="education">
         <div class="container">
             <h2 class="section-title">Educación</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Licenciatura en Ingeniería en Sistemas</h3>
-                        <p class="timeline-date">2021 - Presente</p>
-                        <p>Universidad Autónoma del Estado de Hidalgo (UAEH)</p>
-                        <p>He trabajado en proyectos integradores de software, además de asistir a congresos como AWS Summit y Conasoft para mantenerme actualizado.</p>
-
+            <div class="education-card">
+                <div class="education-logo">
+                    <img src="/img/uaeh-logo.jpg" alt="UAEH Logo">
+                </div>
+                <div class="education-content">
+                    <h3>Ingeniería de Software</h3>
+                    <p class="timeline-date">2021 - Presente</p>
+                    <p><strong>Universidad Autónoma del Estado de Hidalgo (UAEH)</strong></p>
+                    <p>He trabajado en proyectos integradores de software, además de asistir a congresos como AWS Summit y Conasoft para mantenerme actualizado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="container">
+            <h2 class="section-title">Certificaciones</h2>
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <div class="certification-logo">
+                        <img src="/img/aws-certified-cloud-practitioner.png" alt="AWS Certification">
+                    </div>
+                    <div class="certification-content">
+                        <h3><strong>AWS Certified Cloud Practitioner</strong></h3>
+                        <p>Certificación oficial que valida el conocimiento fundamental de los servicios de Amazon Web Services (AWS), sus casos de uso, principios de arquitectura y aspectos clave de seguridad y cumplimiento.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Certificación Cloud Practitioner AWS</h3>
-                        <p class="timeline-date">2025</p>
-                        <p>Udemy / Taller UAEH</p>
-                        <p>Obtuve conocimientos sobre los servicios de AWS, computación en la nube, almacenamiento,
-                            seguridad y mejores prácticas en la arquitectura de soluciones en la nube.</p>
+                <div class="certification-card">
+                    <div class="certification-logo">
+                        <img src="/img/scrum-foundation-learner-2025 (1).png" alt="Scrum Certification">
+                    </div>
+                    <div class="certification-content">
+                        <h3><strong>Certificación en Scrum</strong></h3>
+                        <p>Certificación obtenida en metodologías ágiles Scrum, que respalda mis habilidades para participar eficazmente en proyectos ágiles, enfocándome en la entrega incremental y continua de valor.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Certificación en Scrum Foundation</h3>
-                        <p class="timeline-date">2025</p>
-                        <p>Certiprof</p>
-                        <p>Completé el curso de Scrum 2020, aprendiendo sobre prácticas ágiles para mejorar la eficiencia de equipos y proyectos.</p>
+                <div class="certification-card">
+                    <div class="certification-logo">
+                        <img src="/img/aws-partner-cloud-economics-essentials.png" alt="AWS Cloud Economics">
+                    </div>
+                    <div class="certification-content">
+                        <h3><strong>AWS Partner: Cloud Economics</strong></h3>
+                        <p>Certificación que demuestra comprensión de los principios financieros en la nube, permitiendo optimizar costos, calcular retorno de inversión (ROI) y aplicar mejores prácticas en modelos de gasto en la nube.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Certificación en Desarrollo Full-Stack</h3>
-                        <p class="timeline-date">2023</p>
-                        <p>Udemy</p>
-                        <p>Realicé un curso intensivo en React, Node.js y bases de datos, adquiriendo habilidades esenciales para el desarrollo web completo.</p>
-                    </div>
-                </div>                
             </div>
         </div>
     </section>
@@ -278,7 +328,7 @@
                     </p>
                     <br>
                     <p>
-                        Me especializo en <strong>backend</strong> y tengo sólida experiencia en <strong>desarrollo web</strong>, trabajando con tecnologías clave como <strong>Node.js</strong> y <strong>React</strong>, así como con bases de datos <strong>relacionales</strong> y <strong>no relacionales</strong>. Además, me he capacitado en los <strong>fundamentos de AWS</strong>, familiarizándome con servicios clave como <strong>EC2</strong> y <strong>S3</strong>, lo que me permite implementar soluciones escalables y eficientes en la nube.
+                        Me especializo en <strong>backend</strong> y tengo sólida experiencia en <strong>desarrollo web</strong>, trabajando con tecnologías clave como <strong>Node.js</strong> y <strong>React</strong>, así como con bases de datos <strong>relacionales</strong> y <strong>no relacionales</strong>. Cuento con la certificación <strong>AWS Certified Cloud Practitioner</strong> y amplio conocimiento en servicios de AWS como <strong>Lambda</strong>, <strong>S3</strong>, <strong>EC2</strong>, <strong>Cognito</strong> y <strong>CloudFormation</strong>, lo que me permite diseñar e implementar arquitecturas serverless y soluciones escalables en la nube.
                     </p>                                       
                     <br>
                     <p>
@@ -297,7 +347,7 @@
         <div class="container">
             <!-- Social media links with icons -->
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/jahir-samperio-b03091255/" class="social-link" target="_blank">
+                <a href="https://www.linkedin.com/in/jahir-alberto-samperio-b03091255" class="social-link" target="_blank">
                     <i class="fab fa-linkedin"></i> <!-- Icono de LinkedIn -->
                 </a>
                 <a href="https://github.com/JahirSamperio" class="social-link" target="_blank">
