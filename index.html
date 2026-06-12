@@ -1,185 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio">
-    <title>Jahir Alberto Samperio | Portafolio</title>
-    <link rel="icon" type="image/png" href="/img/JS__2_-removebg-preview.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta name="description" content="Jahir Alberto Samperio - Ingeniero de Software & Cloud">
+    <title>Jahir Alberto Samperio | Cloud & AI Engineer</title>
+    <link rel="icon" type="image/png" href="img/JS__2_-removebg-preview.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <!-- Header with navigation -->
+    <!-- Header -->
     <header>
         <div class="container">
             <nav>
-                <!-- Logo/Name that links to top of page -->
                 <a href="#" class="logo">
                     <img src="img/logo.png" alt="Jahir Logo">
                 </a>
-                <!-- Mobile menu toggle button (only visible on small screens) -->
-                <button class="mobile-menu-btn">☰</button>
-                <!-- Navigation links -->
+                <button class="mobile-menu-btn" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
                 <ul class="nav-links">
                     <li><a href="#experience">Experiencia</a></li>
-                    <li><a href="#projects">Proyectos</a></li>
                     <li><a href="#certifications">Certificaciones</a></li>
+                    <li><a href="#skills">Stack</a></li>
                     <li><a href="#education">Educación</a></li>
                     <li><a href="#about">Sobre mí</a></li>
-                    <li><a href="mailto:jahirsampe1234@gmail.com">Contacto</a></li>
+                    <li><a href="mailto:jahirsampe1234@gmail.com" class="nav-cta">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section - Main introduction area -->
-    <section class="hero" style="background-color: #0f172a;">
-        <article class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="grid-lines"></div>
+            <div class="glow glow-1"></div>
+            <div class="glow glow-2"></div>
+        </div>
+        <article class="container hero-content">
+            <span class="hero-tag"><i class="fas fa-cloud"></i> Cloud & AI Engineer</span>
             <h1>Jahir Alberto Samperio</h1>
-            <h2>Ingeniero de Software</h2>
-            <br>
-            <p>Comprometido a crear soluciones innovadoras y escalables que marquen la diferencia y transformen el
-                presente.</p>
-            <!-- Call-to-action button -->
+            <p>Ingeniero de Software especializado en cloud computing e inteligencia artificial. Diseño soluciones escalables y seguras con AWS.</p>
             <div class="hero-buttons">
-                <a href="mailto:jahirsampe1234@gmail.com" class="btn">Contáctame</a>
-                <a href="/files/JahirAlbertoSamperioCurriculum.pdf" download class="btn btn-outline">Descargar CV</a>
+                <a href="mailto:jahirsampe1234@gmail.com" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i> Contáctame
+                </a>
+                <a href="files/JahirAlbertoSamperioCurriculum.pdf" download class="btn btn-outline">
+                    <i class="fas fa-download"></i> Descargar CV
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Certificaciones AWS</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">+1</span>
+                    <span class="stat-label">Año en Cloud</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Ganas de aprender</span>
+                </div>
             </div>
         </article>
     </section>
 
-    <!-- Experience Section - Work history -->
-    <section id="experience">
+    <!-- Experience Section -->
+    <section id="experience" class="fade-section">
         <div class="container">
-            <h2 class="section-title">Experiencia</h2>
-            <div class="experience-grid">
-                <!-- XalDigital -->
-                <div class="experience-card">
-                    <h3>XalDigital</h3>
-                    <div class="role-badge trainee">Trainee</div>
-                    <p class="timeline-date">Mayo 2025 - Actualidad</p>
-                    <div class="experience-description">
-                        <p>Desarrollo de soluciones en la nube con AWS, empleando servicios como Lambda, S3, CloudFront y CloudFormation. Automatización de flujos mediante infraestructura como código y gestión de autenticación con Cognito, orientado a sistemas escalables y seguros.</p>
+            <h2 class="section-title">
+                <span class="title-icon"><i class="fas fa-briefcase"></i></span>
+                Experiencia
+            </h2>
+            <div class="experience-timeline">
+                <div class="experience-card glass-card">
+                    <div class="exp-header">
+                        <div class="exp-company">
+                            <h3>XalDigital</h3>
+                            <span class="role-badge role-infra"><i class="fas fa-shield-halved"></i> Infrastructure & Security</span>
+                        </div>
+                        <span class="exp-date">Sept 2025 - Actualidad</span>
+                    </div>
+                    <p>Implementación y gestión de infraestructura en AWS, asegurando entornos con buenas prácticas de seguridad, control de accesos, automatización de procesos y soporte en despliegues de aplicaciones escalables.</p>
+                    <div class="exp-tags">
+                        <span>AWS</span>
+                        <span>IAM</span>
+                        <span>CloudFormation</span>
+                        <span>Security</span>
                     </div>
                 </div>
-                
-                <!-- Proyecto 1 -->
-                <div class="experience-card">
-                    <h3>Sitio Web Institucional</h3>
-                    <div class="role-badge backend">Desarrollador Backend</div>
-                    <p class="timeline-date">Octubre 2024 - Enero 2025</p>
-                    <p><strong>Preparatoria Sor Juana Inés de la Cruz</strong></p>
-                    <div class="experience-description">
-                        <ul>
-                            <li>Desarrollé el backend utilizando Node.js para gestionar contenido y funcionalidad.</li>
-                            <li>Implementé una plataforma para la gestión de avisos, horarios, y galería de imágenes.</li>
-                            <li>Gestioné bases de datos con MySQL y optimicé el almacenamiento de medios usando Cloudinary.</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Proyecto 2 -->
-                <div class="experience-card">
-                    <h3>Simulador EGEL</h3>
-                    <div class="role-badge fullstack">Desarrollador Full-Stack</div>
-                    <p class="timeline-date">Enero 2025 - Abril 2025</p>
-                    <p><strong>Escuela Superior de Tlahuelilpan</strong></p>
-                    <div class="experience-description">
-                        <ul>
-                            <li>Desarrollé un simulador interactivo de exámenes EGEL con React para mejorar la preparación estudiantil de la universidad.</li>
-                            <li>Optimizé el análisis de rendimiento, reduciendo el tiempo de análisis y mejorando el desempeño de los estudiantes.</li>
-                            <li>Implementé un sistema de gestión de exámenes y estadísticas para una administración eficiente.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Projects Section - Portfolio of work -->
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">Proyectos</h2>
-            <!-- Grid layout for project cards -->
-            <div class="projects-grid">
-                <!-- Individual project cards -->
-                <div class="project-card kpi-card">
-                    <div class="project-image confidential">
-                        <div class="confidential-content">
-                            <i class="fas fa-chart-line"></i>
-                            <p>Dashboard KPI</p>
-                            <span>Información confidencial</span>
+                <div class="experience-card glass-card">
+                    <div class="exp-header">
+                        <div class="exp-company">
+                            <h3>XalDigital</h3>
+                            <span class="role-badge role-trainee"><i class="fas fa-rocket"></i> Trainee</span>
                         </div>
+                        <span class="exp-date">May 2025 - Sept 2025</span>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">KPI Dashboard – Palacio de Hierro</h3>
-                        <p>Dashboard para visualización de KPIs clave en cumplimiento. Proyecto desarrollado con arquitectura serverless utilizando AWS Lambda, Amazon Cognito, Amazon S3, CloudFront y CloudFormation. Se implementó autenticación, despliegue en la nube y presentación eficiente de datos.</p>
-                        <!-- Technology tags -->
-                        <div class="project-tags">
-                            <span class="project-tag">React</span>
-                            <span class="project-tag">Node.js</span>
-                            <span class="project-tag">AWS Lambda</span>
-                            <span class="project-tag">Cognito</span>
-                            <span class="project-tag">S3</span>
-                            <span class="project-tag">CloudFront</span>
-                            <span class="project-tag">CloudFormation</span>
-                        </div>
+                    <p>Participación en la implementación y gestión de servicios en la nube con AWS (EC2, S3, Lambda), despliegues de proyectos web, revisión de recursos, automatización de procesos y colaboración en equipos ágiles.</p>
+                    <div class="exp-tags">
+                        <span>EC2</span>
+                        <span>S3</span>
+                        <span>Lambda</span>
+                        <span>Agile</span>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <!-- Placeholder image - replace with actual project screenshot -->
-                        <img src="/img/simulador_egel.png" alt="Project 1">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Simulador de exámenes EGEL</h3>
-                        <p>Plataforma interactiva para el EGEL con gestión de exámenes y análisis de rendimiento. Reduce
-                            en 40% el tiempo de análisis y mejora en 35% el desempeño estudiantil.</p>
-                        <!-- Technology tags -->
-                        <div class="project-tags">
-                            <span class="project-tag">React</span>
-                            <span class="project-tag">Node.js</span>
-                            <span class="project-tag">Express</span>
-                            <span class="project-tag">MySQL</span>
-                            <span class="project-tag">Cloudinary</span>
+
+                <div class="experience-card glass-card">
+                    <div class="exp-header">
+                        <div class="exp-company">
+                            <h3>Preparatoria Sor Juana Inés de la Cruz</h3>
+                            <span class="role-badge role-backend"><i class="fas fa-code"></i> Desarrollador Backend</span>
                         </div>
+                        <span class="exp-date">Oct 2024 - Ene 2025</span>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="/img/sorjuana.png" alt="Project 2">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Preparatoria Sor Juana - Sitio Web Institucional</h3>
-                        <p>Sitio web para la gestión de galería, avisos y documentos PDF. API optimizada para actualizar
-                            información académica y administrativa, reduciendo el tiempo de gestión en un 30%.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Node.js</span>
-                            <span class="project-tag">Express</span>
-                            <span class="project-tag">PostgreSQL</span>
-                            <span class="project-tag">Cloudinary</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="./img/starglasses.png" alt="Project 3">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">StarGlasses</h3>
-                        <p>Tienda en línea con autenticación de usuarios, pagos seguros con Stripe y una dashboard
-                            administrativa para gestionar productos y pedidos. Optimización de consultas SQL mejorando
-                            la eficiencia del sistema en un 35%.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Node.js</span>
-                            <span class="project-tag">Express</span>
-                            <span class="project-tag">MySQL</span>
-                            <span class="project-tag">Sequelize</span>
-                            <span class="project-tag">Stripe API</span>
-                        </div>
+                    <p>Desarrollo del backend con Node.js para gestionar contenido institucional. Implementación de plataforma para gestión de avisos, horarios y galería. Gestión de bases de datos con MySQL y almacenamiento con Cloudinary.</p>
+                    <div class="exp-tags">
+                        <span>Node.js</span>
+                        <span>MySQL</span>
+                        <span>Cloudinary</span>
+                        <span>REST API</span>
                     </div>
                 </div>
             </div>
@@ -187,206 +136,206 @@
     </section>
 
     <!-- Certifications Section -->
-    <section id="certifications">
+    <section id="certifications" class="fade-section">
         <div class="container">
-            <h2 class="section-title">Certificaciones</h2>
+            <h2 class="section-title">
+                <span class="title-icon"><i class="fas fa-award"></i></span>
+                Certificaciones
+            </h2>
             <div class="certifications-grid">
-                <div class="certification-card">
-                    <div class="certification-logo">
-                        <img src="/img/ai-practitioner.png" alt="AWS AI Practitioner">
+                <div class="certification-card glass-card">
+                    <div class="cert-badge">
+                        <img src="img/Certified-Generative-AI-Developer.png" alt="AWS Certified Generative AI Developer - Professional">
                     </div>
-                    <div class="certification-content">
-                        <h3><strong>AWS Certified AI Practitioner</strong></h3>
-                        <p class="timeline-date">2025 - 2028</p>
-                        <p>Certificación que valida el conocimiento fundamental de inteligencia artificial y machine learning en AWS, incluyendo servicios de IA, casos de uso y mejores prácticas para implementar soluciones de IA en la nube.</p>
-                    </div>
-                </div>
-                <div class="certification-card">
-                    <div class="certification-logo">
-                        <img src="/img/aws-certified-cloud-practitioner.png" alt="AWS Certification">
-                    </div>
-                    <div class="certification-content">
-                        <h3><strong>AWS Certified Cloud Practitioner</strong></h3>
-                        <p class="timeline-date">2025 - 2028</p>
-                        <p>Certificación oficial que valida el conocimiento fundamental de los servicios de Amazon Web Services (AWS), sus casos de uso, principios de arquitectura y aspectos clave de seguridad y cumplimiento.</p>
+                    <div class="cert-content">
+                        <h3>AWS Certified Generative AI Developer - Professional</h3>
+                        <span class="cert-date">2026 - 2029</span>
+                        <p>Conocimiento práctico para implementar soluciones de IA generativa en producción con AWS, arquitecturas GenAI, modelos fundacionales y soluciones agénticas.</p>
                     </div>
                 </div>
-                <div class="certification-card">
-                    <div class="certification-logo">
-                        <img src="/img/scrum-foundation-learner-2025 (1).png" alt="Scrum Certification">
+
+                <div class="certification-card glass-card">
+                    <div class="cert-badge">
+                        <img src="img/ai-practitioner.png" alt="AWS AI Practitioner">
                     </div>
-                    <div class="certification-content">
-                        <h3><strong>Certificación en Scrum</strong></h3>
-                        <p>Certificación obtenida en metodologías ágiles Scrum, que respalda mis habilidades para participar eficazmente en proyectos ágiles, enfocándome en la entrega incremental y continua de valor.</p>
+                    <div class="cert-content">
+                        <h3>AWS Certified AI Practitioner</h3>
+                        <span class="cert-date">2025 - 2028</span>
+                        <p>Conocimiento fundamental de inteligencia artificial y machine learning en AWS, servicios de IA, casos de uso y mejores prácticas.</p>
+                    </div>
+                </div>
+
+                <div class="certification-card glass-card">
+                    <div class="cert-badge">
+                        <img src="img/aws-certified-cloud-practitioner.png" alt="AWS Cloud Practitioner">
+                    </div>
+                    <div class="cert-content">
+                        <h3>AWS Certified Cloud Practitioner</h3>
+                        <span class="cert-date">2025 - 2028</span>
+                        <p>Conocimiento fundamental de servicios AWS, principios de arquitectura, seguridad y cumplimiento en la nube.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills">
+    <!-- Skills Section -->
+    <section id="skills" class="fade-section">
         <div class="container">
-            <h2 class="section-title">Stack tecnológico</h2>
-            <div class="skills-grid">
-                <!-- Frontend -->
-                <div class="skill-item">
-                    <img src="img/stack/html.png" alt="HTML">
+            <h2 class="section-title">
+                <span class="title-icon"><i class="fas fa-layer-group"></i></span>
+                Stack Tecnológico
+            </h2>
+            <div class="skills-categories">
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item"><img src="img/stack/aws.png" alt="AWS"><span>AWS</span></div>
+                        <div class="skill-item"><img src="img/stack/linux.png" alt="Linux"><span>Linux</span></div>
+                        <div class="skill-item"><img src="img/stack/git.png" alt="Git"><span>Git</span></div>
+                        <div class="skill-item"><img src="img/stack/github.svg" alt="GitHub"><span>GitHub</span></div>
+                    </div>
                 </div>
-                <div class="skill-item">
-                    <img src="img/stack/css.png" alt="CSS">
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item"><img src="img/stack/nodejs.png" alt="Node.js"><span>Node.js</span></div>
+                        <div class="skill-item"><img src="img/stack/express.png" alt="Express"><span>Express</span></div>
+                        <div class="skill-item"><img src="img/stack/javascript.png" alt="JavaScript"><span>JavaScript</span></div>
+                    </div>
                 </div>
-                <div class="skill-item">
-                    <img src="img/stack/javascript.png" alt="JavaScript">
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-database"></i> Bases de Datos</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item"><img src="img/stack/mysql.svg" alt="MySQL"><span>MySQL</span></div>
+                        <div class="skill-item"><img src="img/stack/postgre.png" alt="PostgreSQL"><span>PostgreSQL</span></div>
+                        <div class="skill-item"><img src="img/stack/mongo.svg" alt="MongoDB"><span>MongoDB</span></div>
+                        <div class="skill-item"><img src="img/stack/sqlserver.png" alt="SQL Server"><span>SQL Server</span></div>
+                    </div>
                 </div>
-                <div class="skill-item">
-                    <img src="img/stack/react.png" alt="React">
-                </div>
-
-                <!-- Backend -->
-                <div class="skill-item">
-                    <img src="img/stack/nodejs.png" alt="Node.js">
-                </div>
-                <div class="skill-item">
-                    <img src="img/stack/express.png" alt="Express">
-                </div>
-
-                <!-- Bases de Datos -->
-                <div class="skill-item">
-                    <img src="img/stack/mysql.svg" alt="MySQL">
-                </div>
-                <div class="skill-item">
-                    <img src="img/stack/postgre.png" alt="PostgreSQL">
-                </div>
-                <div class="skill-item">
-                    <img src="img/stack/mongo.svg" alt="MongoDB">
-                </div>
-                <div class="skill-item">
-                    <img src="img/stack/sequelize.webp" alt="Sequelize">
-                </div>
-                <div class="skill-item">
-                    <img src="img/stack/sqlserver.png" alt="SQL Server">
-                </div>
-
-                <!-- Servicios en la Nube -->
-                <div class="skill-item">
-                    <img src="img/stack/aws.png" alt="AWS">
-                </div>
-                <div class="skill-item">
-                    <img src="img/stack/cloudinary.webp" alt="Cloudinary">
-                </div>
-
-                <!-- Control de Versiones -->
-                <div class="skill-item">
-                    <img src="img/stack/git.png" alt="Git">
-                </div>
-                <div class="skill-item">
-                    <img src="img/stack/github.svg" alt="GitHub">
-                </div>
-
-                <!-- Otros -->
-                <div class="skill-item">
-                    <img src="img/stack/linux.png" alt="Linux">
-                </div>
-                <div class="skill-item">
-                    <img src="img/stack/vscode.png" alt="VS Code">
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-palette"></i> Frontend</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item"><img src="img/stack/react.png" alt="React"><span>React</span></div>
+                        <div class="skill-item"><img src="img/stack/html.png" alt="HTML"><span>HTML</span></div>
+                        <div class="skill-item"><img src="img/stack/css.png" alt="CSS"><span>CSS</span></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Education Section - Academic background -->
-    <section id="education">
+    <!-- Education Section -->
+    <section id="education" class="fade-section">
         <div class="container">
-            <h2 class="section-title">Educación</h2>
-            <div class="education-card">
-                <div class="education-logo">
-                    <img src="/img/uaeh-logo.jpg" alt="UAEH Logo">
+            <h2 class="section-title">
+                <span class="title-icon"><i class="fas fa-graduation-cap"></i></span>
+                Educación
+            </h2>
+            <div class="education-card glass-card">
+                <div class="edu-logo">
+                    <img src="img/uaeh-logo.jpg" alt="UAEH Logo">
                 </div>
-                <div class="education-content">
+                <div class="edu-content">
                     <h3>Ingeniería de Software</h3>
-                    <p class="timeline-date">2021 - Presente</p>
-                    <p><strong>Universidad Autónoma del Estado de Hidalgo (UAEH)</strong></p>
+                    <span class="edu-date">2021 - Presente</span>
+                    <p class="edu-institution">Universidad Autónoma del Estado de Hidalgo (UAEH)</p>
                     <p>He trabajado en proyectos integradores de software, además de asistir a congresos como AWS Summit y Conasoft para mantenerme actualizado.</p>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <!-- About Section - Personal information and bio -->
-    <section id="about">
+    <!-- About Section -->
+    <section id="about" class="fade-section">
         <div class="container">
-            <h2 class="section-title">Sobre mí</h2>
-            <!-- Two-column layout with image and text -->
-            <div class="about-content">
+            <h2 class="section-title">
+                <span class="title-icon"><i class="fas fa-user"></i></span>
+                Sobre mí
+            </h2>
+            <div class="about-content glass-card">
                 <div class="about-image">
-                    <!-- Placeholder image - replace with your actual photo -->
-                    <img src="/img/perfil.jpg" alt="Jahir Alberto Samperio">
+                    <img src="img/perfil.jpg" alt="Jahir Alberto Samperio">
                 </div>
                 <div class="about-text">
                     <p>
-                        Comencé a programar a finales de la preparatoria, motivado por mi <strong>curiosidad</strong>
-                        por las computadoras y mi <strong>entusiasmo</strong> por crear programas y resolver problemas.
+                        Comencé a programar a inicios de la universidad, motivado por mi <strong>curiosidad</strong> por la tecnología y la <strong>resolución de problemas</strong>.
                     </p>
-                    <br>
                     <p>
-                        Me especializo en <strong>backend</strong> y tengo sólida experiencia en <strong>desarrollo web</strong>, trabajando con tecnologías clave como <strong>Node.js</strong> y <strong>React</strong>, así como con bases de datos <strong>relacionales</strong> y <strong>no relacionales</strong>. Cuento con la certificación <strong>AWS Certified Cloud Practitioner</strong> y amplio conocimiento en servicios de AWS como <strong>Lambda</strong>, <strong>S3</strong>, <strong>EC2</strong>, <strong>Cognito</strong> y <strong>CloudFormation</strong>, lo que me permite diseñar e implementar arquitecturas serverless y soluciones escalables en la nube.
-                    </p>                                       
-                    <br>
+                        Soy <strong>ingeniero de software</strong> con enfoque en <strong>cloud computing</strong>. Diseño y desarrollo soluciones escalables con <strong>AWS</strong>, combinando desarrollo backend, infraestructura como código e <strong>inteligencia artificial</strong>. Certificado en <strong>AWS Cloud</strong>, <strong>AI</strong> y <strong>Generative AI</strong>.
+                    </p>
                     <p>
-                        Mi objetivo es seguir
-                        <strong>aprendiendo</strong>, mejorar mis <strong>habilidades</strong> y seguir creando
-                        <strong>software de calidad</strong> que aporte <strong>valor</strong> a los usuarios.
+                        Mi objetivo es seguir construyendo <strong>soluciones</strong> que integren <strong>nube</strong> e <strong>IA</strong> para generar <strong>valor real</strong>.
                     </p>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Footer with social links and copyright -->
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <!-- Social media links with icons -->
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/jahir-alberto-samperio-b03091255" class="social-link" target="_blank">
-                    <i class="fab fa-linkedin"></i> <!-- Icono de LinkedIn -->
+                <a href="https://www.linkedin.com/in/jahir-alberto-samperio-b03091255" class="social-link" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://github.com/JahirSamperio" class="social-link" target="_blank">
-                    <i class="fab fa-github"></i> <!-- Icono de GitHub -->
+                <a href="https://github.com/JahirSamperio" class="social-link" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
                 </a>
-                <a href="mailto:jahirsampe1234@gmail.com" class="social-link">
-                    <i class="fas fa-envelope"></i> <!-- Icono de Email -->
+                <a href="mailto:jahirsampe1234@gmail.com" class="social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
                 </a>
             </div>
             <p class="footer-text">&copy; 2025 Jahir Alberto Samperio. Todos los derechos reservados.</p>
         </div>
     </footer>
-    
 
-    <!-- JavaScript for interactive elements -->
     <script>
-        // Mobile menu toggle functionality
+        // Mobile menu
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const navLinks = document.querySelector('.nav-links');
 
         mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active'); // Shows/hides the mobile menu
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.querySelector('i').classList.toggle('fa-bars');
+            mobileMenuBtn.querySelector('i').classList.toggle('fa-xmark');
         });
 
-        // Smooth scrolling for navigation links
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault(); // Prevents default jump to section
-
-                // Close mobile menu when a link is clicked
+                e.preventDefault();
                 navLinks.classList.remove('active');
-
-                // Smooth scroll to the section
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
             });
+        });
+
+        // Fade-in on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Animate stats on scroll
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.hero-stats').forEach(el => {
+            statsObserver.observe(el);
         });
     </script>
 </body>
